@@ -31,12 +31,16 @@ To set up DocAppointment on your local machine, follow these steps:
 2. Navigate to the project directory:
 `cd DocAppointment`
 3. Install dependencies for both the client and server:
-`cd client
-npm install
-cd ../server
-npm install`
 
-4. Create a `.env` file in the `server` directory and configure the following environment variables:
+`cd client`
+
+`npm install`
+
+`cd ../server`
+
+`npm install`
+
+5. Create a `.env` file in the `server` directory and configure the following environment variables:
 
 PORT=3000
 MONGO_URI=your_mongodb_uri
