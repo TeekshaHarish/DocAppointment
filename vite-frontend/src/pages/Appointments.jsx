@@ -7,7 +7,7 @@ const Appointments = () => {
   const [appointments, setAppointments] = useState();
   const getAppointments = async () => {
     try {
-      const res = await axios.get("/api/v1/user/getAppointments", {
+      const res = await axios.get(`${import.meta.env.VITE_BACKEND_API}/api/v1/user/getAppointments`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -29,7 +29,7 @@ const Appointments = () => {
   const deleteAppointmentHandler = async (record) => {
     try {
       const res = await axios.post(
-        "/api/v1/doctor/deleteAppointment",
+        `${import.meta.env.VITE_BACKEND_API}/api/v1/doctor/deleteAppointment`,
         {
           appointmentId: record._id,
         },

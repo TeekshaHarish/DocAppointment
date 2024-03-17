@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
       // console.log("I AM CALLED");
       // dispatch(showLoading());
       const res = await axios.post(
-        "/api/v1/user/getUserData",
+        `${import.meta.env.VITE_BACKEND_API}/api/v1/user/getUserData`,
         { token: localStorage.getItem("token") },
         {
           headers: {
