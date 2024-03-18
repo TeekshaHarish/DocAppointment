@@ -13,7 +13,7 @@ export default function Register() {
   const onFinishHandler = async (values) => {
     try {
       dispatch(showLoading());
-      const res = await axios.post(`${import.meta.env.VITE_BACKEND_API}/api/v1/user/register`, values);
+      const res = await axios.post("/api/v1/user/register", values);
       dispatch(hideLoading());
       if (res.data.success) {
         message.success("Registered scuucessfully!");

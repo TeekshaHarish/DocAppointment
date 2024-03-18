@@ -8,7 +8,7 @@ const Users = () => {
   const getAllUsers = async () => {
     try {
       const res = await axios.get(
-        "/api/v1/admin/getAllUsers",
+        `${import.meta.env.VITE_BACKEND_API}/api/v1/admin/getAllUsers`,
 
         {
           headers: {
@@ -33,7 +33,7 @@ const Users = () => {
   const deleteUser = async (record) => {
     try {
       const res = await axios.post(
-        "/api/v1/admin/deleteUser",
+        `${import.meta.env.VITE_BACKEND_API}/api/v1/admin/deleteUser`,
         { userToDeleteId: record._id },
         {
           headers: {

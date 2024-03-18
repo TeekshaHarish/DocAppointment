@@ -13,7 +13,7 @@ const BookingPage = () => {
   const getDoctorData = async () => {
     try {
       const res = await axios.post(
-        `${import.meta.env.VITE_BACKEND_API}/api/v1/doctor/getDoctorById`,
+        "/api/v1/doctor/getDoctorById",
         { doctorId: params.doctorId },
         {
           headers: {
@@ -86,7 +86,7 @@ const BookingPage = () => {
         return alert("Date and Time required");
       }
       const res = await axios.post(
-        `${import.meta.env.VITE_BACKEND_API}/api/v1/user/book-appointment`,
+        "/api/v1/user/book-appointment",
         {
           doctorId: params.doctorId,
           startTime: time.format("HH:mm"),
@@ -117,7 +117,7 @@ const BookingPage = () => {
       const endingTime = findEndingTime(time);
       const beforeTime = findBeforeTime(time);
       const res = await axios.post(
-        `${import.meta.env.VITE_BACKEND_API}/api/v1/user/check-available-appointment`,
+        "/api/v1/user/check-available-appointment",
         {
           doctorId: params.doctorId,
           startTime: time.format("HH:mm"),

@@ -27,7 +27,7 @@ export const ApplyDoctor = () => {
       // );
       console.log("FORM", formTimings);
       const res = await axios.post(
-        "/api/v1/user/apply-doctor",
+        `${import.meta.env.VITE_BACKEND_API}/api/v1/user/apply-doctor`,
         {
           ...values,
           timings: [

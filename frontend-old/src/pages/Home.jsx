@@ -9,7 +9,7 @@ const Home = () => {
   const [doctors, setDoctors] = useState();
   const getAllDoctors = async () => {
     try {
-      const res = await axios.get(`${import.meta.env.VITE_BACKEND_API}/api/v1/user/getAllDoctors`, {
+      const res = await axios.get("/api/v1/user/getAllDoctors", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

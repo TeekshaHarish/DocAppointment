@@ -8,7 +8,7 @@ const DocProfile = () => {
   const [doctor, setDoctor] = useState();
   const getDoctorInfo = async () => {
     try {
-      const res = await axios.get("/api/v1/doctor/getDoctorInfo", {
+      const res = await axios.get(`${import.meta.env.VITE_BACKEND_API}/api/v1/doctor/getDoctorInfo`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -31,7 +31,7 @@ const DocProfile = () => {
     try {
       //we can send as just values or as {...values}
       const res = await axios.post(
-        "/api/v1/doctor/updateDoctorProfile",
+        `${import.meta.env.VITE_BACKEND_API}/api/v1/doctor/updateDoctorProfile`,
         {
           ...values,
           timings: [

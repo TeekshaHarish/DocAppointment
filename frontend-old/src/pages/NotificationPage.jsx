@@ -15,7 +15,7 @@ const NotificationPage = () => {
     try {
       dispatch(showLoading());
       const res = await axios.post(
-        `${import.meta.env.VITE_BACKEND_API}/api/v1/user/read-all-notifications`,
+        "api/v1/user/read-all-notifications",
         {},
         {
           headers: {
@@ -39,7 +39,7 @@ const NotificationPage = () => {
   const DeleteAllReadHandler = async () => {
     try {
       const res = await axios.post(
-        `${import.meta.env.VITE_BACKEND_API}/api/v1/user/delete-all-notifications`,
+        "/api/v1/user/delete-all-notifications",
         {},
         {
           headers: {

@@ -8,7 +8,7 @@ const Doctors = () => {
   const getAllDoctors = async () => {
     try {
       const res = await axios.get(
-        `${import.meta.env.VITE_BACKEND_API}/api/v1/admin/getAllDoctors`,
+        "/api/v1/admin/getAllDoctors",
 
         {
           headers: {
@@ -34,7 +34,7 @@ const Doctors = () => {
     try {
       console.log("record", record);
       const res = await axios.post(
-        `${import.meta.env.VITE_BACKEND_API}/api/v1/admin/changeDoctorStatus`,
+        "/api/v1/admin/changeDoctorStatus",
         {
           doctorId: record._id,
           status: status,
@@ -60,7 +60,7 @@ const Doctors = () => {
   const deleteDoctor = async (record) => {
     try {
       const res = await axios.post(
-        `${import.meta.env.VITE_BACKEND_API}/api/v1/admin/deleteDoctor`,
+        "/api/v1/admin/deleteDoctor",
         {
           doctorId: record._id,
         },
