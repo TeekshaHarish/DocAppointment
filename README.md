@@ -26,29 +26,66 @@ DocAppointment is a MERN stack application designed to streamline the process of
 
 To set up DocAppointment on your local machine, follow these steps:
 
-1. Clone the repository:
-`git clone https://github.com/TeekshaHarish/DocAppointment.git`
-2. Navigate to the project directory:
-`cd DocAppointment`
-3. Install dependencies for both the client and server:
+1. **Clone this repository**: Begin by cloning the repository to your local machine using the following command:
+    ```bash
+    git clone https://github.com/TeekshaHarish/DocAppointment.git
+    ```
 
-`cd client`
+2. **Setup the backend**: Navigate to the cloned repository and install the required dependencies by running the following command:
+    ```bash
+    cd DocAppointment
+    npm install
+    ```
+- **Setup the backend environment variables**: Copy the environment variables to `.env` and change the values
 
-`npm install`
+    ```shell
+    cp .env.example .env
+    ```
 
-`cd ../server`
+    The following environment variables must be set:
 
-`npm install`
+    - `MONGO_URL` - The connection string for the MongoDB database
 
-5. Create a `.env` file in the `server` directory and configure the following environment variables:
+    - `JWT_SECRET` - The secret key for JWT authentication
 
-PORT=3000
-MONGO_URI=your_mongodb_uri
-SECRET_KEY=your_secret_key_for_jwt
+    - `PORT` - The port on which the backend server (default: 8080)
 
-5. Run both the client and server:
+        ```env
+        MONGO_URL="your_mongodb_url"
+        JWT_SECRET="your_secret_key_for_jwt"
+        PORT="8080"
+        ```
 
-`npm run dev` in the root directory
+3. **Setup the frontend**: Navigate to the frontend directory and install the required dependencies by running the following command:
+    ```bash
+    cd frontend
+    npm install
+    ```
+
+- **Setup the frontend environment variables**: Copy the environment variables to `.env` and change the values
+
+    ```shell
+    cp .env.example .env
+    ```
+
+    The following environment variables must be set:
+
+    - `VITE_BACKEND_API` - The backend server url ( default: http://localhost:8080 )
 
 
-6. Access the application in your browser at `http://localhost:3000`.
+4. **Run the project**: Once you have installed the dependencies and added the required environment variables, you are ready to run the project. 
+
+    To start both the frontend and backend servers simultaneously, run the following command:
+
+    if you are in frontend folder go back to root folder
+     ```bash
+    cd .. 
+    npm run dev
+    ```
+    or if you are in root folder
+    ```bash
+    npm run dev
+    ```
+
+    Visit [http://localhost:3000](http://localhost:3000) in your browser.
+
