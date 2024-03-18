@@ -50,10 +50,14 @@ To set up DocAppointment on your local machine, follow these steps:
 
     - `PORT` - The port on which the backend server (default: 8080)
 
+    - `DEV_MODE` - The development mode 
+
+
         ```env
         MONGO_URL="your_mongodb_url"
         JWT_SECRET="your_secret_key_for_jwt"
         PORT="8080"
+        DEV_MODE=development
         ```
 
 3. **Setup the frontend**: Navigate to the frontend directory and install the required dependencies by running the following command:
