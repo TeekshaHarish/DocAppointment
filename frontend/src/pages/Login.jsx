@@ -12,7 +12,8 @@ const Login = () => {
   const onFinishHandler = async (values) => {
     try {
       dispatch(showLoading());
-      const res = await axios.post("/api/v1/user/login", values);
+      // console.log(values)
+      const res = await axios.post(`${import.meta.env.VITE_BACKEND_API}/api/v1/user/login`, values);
       dispatch(hideLoading());
       if (res.data.success) {
         localStorage.setItem("token", res.data.token);
