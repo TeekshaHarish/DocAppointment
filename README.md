@@ -57,6 +57,7 @@ To set up DocAppointment on your local machine, follow these steps:
         ```
 
 3. **Setup the frontend**: Navigate to the frontend directory and install the required dependencies by running the following command:
+
     ```bash
     cd frontend
     npm install
